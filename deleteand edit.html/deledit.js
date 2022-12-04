@@ -48,4 +48,12 @@ function removeItem(e){
     }
   }
 }
-
+// add edit button
+var itemForEdit = document.querySelectorAll('.list-group-item');
+for (let i = 0; i < itemForEdit.length; i++) {
+    var editButton = document.createElement('button');
+    editButton.className = 'edit-button';
+    var editButtonText = document.createTextNode('Edit');
+    editButton.appendChild(editButtonText);
+    itemForEdit[i].appendChild(editButton);
+}
